@@ -18,3 +18,8 @@ ggplot(penguins, aes(x = species, y = bill_length_mm, fill = species)) +
 ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, fill = species)) +
   geom_point() +
   labs(x = "Bill length", y = "Bill width")
+
+## Mean of body mass in adelie
+filter(penguins, species == "Adelie") |> 
+  group_by(sex) |>
+  summarise(mean_body_mass = mean(body_mass_g))
