@@ -14,3 +14,7 @@ ggplot(penguins, aes(x = species, y = bill_length_mm, fill = species)) +
   theme(title = element_text(size = 10),
         axis.title = element_text(size = 10),
         axis.text = element_text(colour = "navy"))
+
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, fill = species)) +
+  geom_point() +
+  labs(x = "Bill length", y = "Bill width")
