@@ -23,3 +23,5 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, fill = species)) +
 filter(penguins, species == "Adelie") |> 
   group_by(sex) |>
   summarise(mean_body_mass = mean(body_mass_g))
+
+#edited
