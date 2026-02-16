@@ -35,4 +35,8 @@ library(car)
 ggplot(cars, aes(x = speed, y = dist)) +
   geom_point() +
   geom_line() +
-  theme_bw()
+  theme_bw() + 
+  labs(
+    x = "Speed (km/h)",
+    y = "Distance (km)"
+  )
