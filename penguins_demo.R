@@ -30,3 +30,9 @@ ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
   labs( 
     x = "Species",
     y = "Body mass (g)")
+
+library(car)
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point() +
+  geom_line() +
+  theme_bw()
