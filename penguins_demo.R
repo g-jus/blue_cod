@@ -15,7 +15,7 @@ ggplot(penguins, aes(x = species, y = bill_length_mm, fill = species)) +
         axis.title = element_text(size = 10),
         axis.text = element_text(colour = "navy"))
 
-ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, fill = species)) +
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, colour = species)) +
   geom_point() +
   labs(x = "Bill length", y = "Bill width")
 
@@ -23,3 +23,10 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, fill = species)) +
 filter(penguins, species == "Adelie") |> 
   group_by(sex) |>
   summarise(mean_body_mass = mean(body_mass_g))
+
+ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
+  geom_violin() + 
+  theme_bw() + 
+  labs( 
+    x = "Species",
+    y = "Body mass (g)")
